@@ -1,0 +1,20 @@
+{
+  "name": "dizzy",
+  "version": "1.0.0",
+  "description": "front end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furfio/dizzy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/furfio/dizzy/issues"
+  },
+  "homepage": "https://github.com/furfio/dizzy#readme"
+}
