@@ -22,7 +22,7 @@ jobs:
     - name: Log in to registry
       uses: docker/login-action@v1
       with:
-        registry: https://mcr.microsoft.com/
+        registry: dizzyregistry.azurecr.io/
         username: ${{ secrets.AzureAppService_ContainerUsername_db6093ea62e4484187d8b49186873b3d }}
         password: ${{ secrets.AzureAppService_ContainerPassword_50f37a033acc49d582243b5238bd53ad }}
 
@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_db6093ea62e4484187d8b49186873b3d }}/appsvc/staticsite:${{ github.sha }}
+        tags: dizzyregistry.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_db6093ea62e4484187d8b49186873b3d }}/staticsite:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -48,4 +48,4 @@ jobs:
         app-name: 'dizzy'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_a62f861b5c2048dbb4de945586dd7ace }}
-        images: 'mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_db6093ea62e4484187d8b49186873b3d }}/appsvc/staticsite:${{ github.sha }}'
+        images: 'dizzyregistry.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_db6093ea62e4484187d8b49186873b3d }}/staticsite:${{ github.sha }}'
