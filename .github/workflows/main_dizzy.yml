@@ -52,4 +52,4 @@ jobs:
           app-name: 'dizzy'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A26C3ED42A0948B88443E8875D0E802A }}
-          package: ./dist
+          package: .
