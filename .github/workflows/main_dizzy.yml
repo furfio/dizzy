@@ -49,5 +49,5 @@ jobs:
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_a62f861b5c2048dbb4de945586dd7ace }}
         images: 'dizzyregistry.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_db6093ea62e4484187d8b49186873b3d }}/staticsite:${{ github.sha }}'
-        stack: 'linux'
+        stack: 'windows'
         command: 'docker run -d -p 80:80 dizzyregistry.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_db6093ea62e4484187d8b49186873b3d }}/staticsite:${{ github.sha }}'
