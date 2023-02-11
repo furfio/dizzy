@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Apis } from "../api/Api";
+import '../static/css/test.css'
+import '../static/css/test.less'
 
 const Test = () => {
     const [testData, setTestData] = useState([]);
@@ -23,7 +25,7 @@ const Test = () => {
     return (
         <>
             <h2>Test data</h2>
-            <ul>
+            <ul className="TestUl">
                 {testData.map(data =>
                     <li key={JSON.stringify(data)}>
                         {JSON.stringify(data)}
